@@ -8,19 +8,26 @@ No SDK to learn. No API docs to read. Just connect and ask.
 
 ## Connect
 
-Add to your Claude Desktop config (`claude_desktop_config.json`):
+### Claude.ai / Claude Desktop (Remote)
 
-```json
-{
-  "mcpServers": {
-    "galan": {
-      "url": "https://garm.valiant-quantum.com/quantlet/mcp/mcp"
-    }
-  }
-}
+Go to [claude.ai/settings/connectors](https://claude.ai/settings/connectors) and add:
+
+```
+https://garm.valiant-quantum.com/mcp
 ```
 
-Restart Claude Desktop. Six tools become available.
+Select **Streamable HTTP** as transport type. Six tools become available immediately.
+
+### Claude Desktop (Local Client)
+
+Alternatively, install the local client:
+
+```bash
+pip install galan-mcp
+galan init
+```
+
+This writes the config to `claude_desktop_config.json` automatically. Restart Claude Desktop.
 
 ## Tools
 
